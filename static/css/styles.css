@@ -211,6 +211,7 @@ footer {
   padding: 10px;
   color: #ebc663;
   border-radius:4px;
+   font-family: "Poppins", sans-serif;
 }
 .card-container {
   display: flex;
