@@ -1,0 +1,324 @@
+*{
+  
+  .poppins-regular {
+      font-family: "Poppins", sans-serif;
+      font-weight: 400;
+      font-style: normal;
+    }
+    
+    .poppins-light {
+      font-family: "Poppins", sans-serif;
+      font-weight: 300;
+      font-style: normal;
+    }
+    
+    .poppins-medium {
+      font-family: "Poppins", sans-serif;
+      font-weight: 500;
+      font-style: normal;
+    }
+    
+    .poppins-semibold {
+      font-family: "Poppins", sans-serif;
+      font-weight: 600;
+      font-style: normal;
+    }
+    
+    .poppins-bold {
+      font-family: "Poppins", sans-serif;
+      font-weight: 700;
+      font-style: normal;
+    }
+}
+body {
+  
+  background:#344955;
+  color: #333;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  width: 100%;
+ 
+}
+
+/* Header styles */
+header {
+  background-color: #50727B;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  
+}
+
+header nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+header nav a {
+  color: #ebc663;
+  text-decoration: none;
+  font-weight: bold;
+  font-family: "Poppins", sans-serif;
+  
+}
+
+
+header nav a:hover {
+  text-decoration: underline;
+}
+
+header .welcome {
+  margin-top: 10px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #ebc663;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+/*--- Footer styles ---*/
+footer {
+  background-color: #50727B;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  font-family: "Poppins", sans-serif;
+}
+
+/*--- Container styles--- */
+.container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  box-sizing: border-box;
+  flex-direction: column;
+}
+
+/*--- Form container styles--- */
+.form-container {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  max-width: 400px;
+  width: 100%;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.form-container h1 {
+  margin-bottom: 20px;
+  color: #ebc663;
+}
+
+.form-container label {
+  display: block;
+  text-align: left;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.form-container input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+/*--- Login button styles ---*/
+.btn-primary {
+  background-color: #ebc663;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin-top: 10px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #ebc663;
+}
+
+/*--- Flash message styles ---*/
+.flash-message {
+  padding: 15px;
+  margin: 20px auto;
+  border-radius: 4px;
+  max-width: 400px;
+  width: 100%;
+  text-align: center;
+  font-size: 16px;
+  color: #fff;
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.flash-message.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.flash-message.success {
+  background-color: #4CAF50;
+}
+
+.flash-message.error {
+  background-color: #f44336;
+}
+
+.flash-message.info {
+  background-color: #2196F3;
+}
+
+/* Welcome message box styles */
+.welcome-box {
+  background-color: #78A083;
+  padding: 20px;
+  border-radius: 64% 36% 67% 33% / 25% 68% 32% 75%;
+  box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+  max-width: 900px;
+  width: 100%;
+  height: 400px;
+  text-align: center;
+  margin-top: 10px;
+  background-image:linear-gradient(rgba(4, 9, 30, 0.364),rgba(4, 9, 30, 0.372)), url('/static/images/toa-heftiba-FV3GConVSss-unsplash.jpg');
+  background-size: cover;
+  background-position: center;
+  color: rgb(255, 253, 253); /* Assuming text color change for better readability */
+}
+
+.welcome-box h1,
+.welcome-box p {
+  margin: 0;
+  padding: 10px;
+  color: #ebc663;
+  border-radius:4px;
+}
+.card-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  margin-top: 150px;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+
+
+
+.card {
+  position: relative;
+  width: 200px;
+  height: 300px;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+.card-1 { background-image: url('/static/images/card1.jpg');
+          background-position: center;
+          background-size: cover; 
+        }
+.card-2 { background-image: url('/static/images/card2.jpg');
+  background-position: center;
+  background-size: cover;  }
+.card-3 {  background-image: url('/static/images/card3.jpg');
+  background-position: center;
+  background-size: cover;  }
+.card-4 { background-image: url('/static/images/card4.jpg');
+  background-position: center;
+  background-size: cover;  }
+.card-5 { background-image: url('/static/images/card5.jpg');
+  background-position: center;
+  background-size: cover;  }
+.card-6 {  background-image: url('/static/images/card6.jpg');
+  background-position: center;
+  background-size: cover; }
+.card-7 {  background-image: url('/static/images/card7.jpg');
+  background-position: center;
+  background-size: cover;  }
+.card-8 { background-image: url('/static/images/card8.jpg');
+  background-position: center;
+  background-size: cover;  }
+
+.card:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.4);
+}
+
+
+
+.payment-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.payment-info img {
+  width: 200px;
+  height: 300px;
+  margin-bottom: 20px;
+}
+
+.payment-info form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+  max-width: 300px;
+}
+
+.payment-info form label {
+  text-align: left;
+  margin-bottom: 5px;
+}
+
+.payment-info form input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+
+
+
+         
+
+
+
+
+
+
+
+
+
+
+

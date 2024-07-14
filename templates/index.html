@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+    <div class="welcome-box">
+        <h1>Welcome, {{ username }}!</h1>
+        <p>Check out our latest items below.</p>
+    </div>
+    <div class="card-container">
+        {% for card_id in range(1, 9) %}
+        <div class="card">
+            <a href="{{ url_for('payment', card_id=card_id) }}">
+                <img src="{{ url_for('static', filename='images/card' ~ card_id ~ '.jpg') }}" alt="Card {{ card_id }}">
+                
+                    
+            </a>
+        </div>
+        {% endfor %}
+    </div>
+{% endblock %}

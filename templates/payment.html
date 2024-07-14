@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block title %}Payment{% endblock %}
+
+{% block content %}
+    <div class="payment-info">
+        <img src="{{ url_for('static', filename='images/card' ~ card_id ~ '.jpg') }}" alt="Card Image">
+        <h2><span style="color: #ebc663;">new itm</span> {{ card }}</h2>
+        <p><span style="color: #ebc663;">Price: $100</span></p>
+        <form action="{{ url_for('payment', card_id=card_id) }}" method="post">
+            <label for="quantity"><span style="color: #ebc663;">Quantity:</span></label>
+            <input type="number" id="quantity" name="quantity" min="1" max="10" required>
+            <label for="card-number"><span style="color: #ebc663;">Card Number:</span></label>
+            <input type="text" id="card-number" name="card-number" required>
+            <label for="expiration-date"><span style="color: #ebc663;">Expiration Date:</span></label>
+            <input type="text" id="expiration-date" name="expiration-date" required>
+            <label for="cvv"><span style="color: #ebc663;">CVV:</span></label>
+            <input type="text" id="cvv" name="cvv" required>
+            <button type="submit" class="btn-primary">Pay Now</button>
+        </form>
+    </div>
+{% endblock %}
